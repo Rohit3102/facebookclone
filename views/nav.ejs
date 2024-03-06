@@ -1,0 +1,124 @@
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #fff;
+    }
+
+    html, body {
+        width: 100%;
+        height: 100%;
+       
+    }
+
+
+    .head {
+        width: 100%;
+        padding: 4vw 5vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* position: fixed;
+        top: 0%; */
+    }
+
+    .head img {
+        width: 25vw;
+    }
+
+    .head #icons {
+        display: flex;
+        align-items: center;
+        gap: 2.4vw;
+
+    }
+
+    #icons a {
+        text-decoration: none;
+        color: #000;
+        font-size: 5.5vw;
+        cursor: pointer;
+    }
+
+    #nav {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 3vw 10vw;
+        margin-top: 2vw;
+        margin-bottom: 5rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.609);
+        /* position: fixed;
+        top: 5%; */
+    }
+
+    #nav a {
+        text-decoration: none;
+        color: #000;
+        font-size: 5.5vw;
+    }
+    .uperNav {
+        width: 50vw;
+        height: 40vw;
+        position: absolute;
+        right: 0%;
+        top: 6%;
+        flex-direction: column;
+        background-color: #686868;
+        display: none;
+    }
+    
+    .uperNav a{
+        margin-top: 2rem;
+        text-decoration: none;
+        color: #fff;
+        background-color: transparent;
+        font-size: 6.5vw;
+        cursor: pointer;
+    }
+</style>
+<main>
+    <header class="head">
+        <img src="https://freelogopng.com/images/all_img/1657548410facebook-png.png" alt="">
+
+        <div id="icons">
+            <a id="btn"><i class="ri-add-circle-fill"></i></a>
+            <a href="/search"><i class="ri-search-line"></i></a>
+            <a href="/messenger"><i class="ri-messenger-fill"></i></a>
+        </div>
+        <aside class="uperNav">
+            <a href="/addpost">Add New Post</a><br>
+            <a href="/story">Add New Story</a><br>
+            <a href="/addvideo">Add New video</a>
+
+        </aside>
+
+    </header>
+    <nav id="nav">
+        <a href="/feed"><i class="ri-home-5-fill"></i></a>
+        <a href="/addfriends"><i class="ri-user-add-line"></i></a>
+        <a href="/videos"><i class="ri-movie-line"></i></a>
+        <a href="/profile"><i class="ri-profile-fill"></i></a>
+        <a href="/notification"><i class="ri-notification-2-line"></i></a>
+        <a><i class="ri-menu-line"></i></a>
+    </nav>
+
+    <script>
+        let rohit = 1
+       const uperNav = document.querySelector(".uperNav");
+        document.querySelector("#btn").addEventListener('click', 
+     function(){
+        if(rohit == 1){
+            uperNav.style.display = "inline"
+            rohit = 0
+        }else{
+            uperNav.style.display = "none"
+            rohit = 1
+        }
+     }   
+        )
+    </script>
+</main>

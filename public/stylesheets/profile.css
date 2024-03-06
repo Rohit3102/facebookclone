@@ -1,0 +1,220 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+main{
+    position: relative;
+}
+
+.nav {
+    width: 100%;
+    padding: 3vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.nav .back {
+    display: flex;
+    align-items: center;
+    gap: 4vw;
+}
+
+.nav a {
+    text-decoration: none;
+    font-size: 5.2vw;
+}
+
+.cover {
+    width: 100%;
+    height: 30vh;
+    background-color: gray;
+    position: relative;
+}
+
+.cover-img {
+    width: 100%;
+    height: 100%;
+    background-color: burlywood;
+    position: relative;
+}
+
+.cover-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cover>.cover-img>button{
+    position: absolute;
+    z-index: 9999;
+    font-size: 2.6rem;
+    border: none;
+    background-color: transparent;
+    bottom: -10%;
+    right: 4%;
+}
+
+.cover .profile-img {
+    width: 40%;
+    height: 60%;
+    position: absolute;
+    top: 70%;
+    left: 4%;
+    border-radius: 50%;
+    border: 3px solid rgb(243, 230, 230);
+}
+
+.cover>.profile-img>button{
+    position: absolute;
+    z-index: 9999;
+    font-size: 2.5rem;
+    border: none;
+    background-color: #fff;
+    bottom: 2%;
+    right: 3%;
+}
+
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+
+}
+
+.info {
+    width: 100%;
+    margin-top: 20%;
+    padding: 2vw 5vw;
+    position: relative;
+}
+
+.info h5 {
+    margin: 2vw 0;
+    font-size: 5vw;
+    opacity: .6;
+}
+
+.info p {
+    margin-top: 5vw;
+    font-size: 4vw;
+    opacity: .8;
+}
+
+.btn-div {
+    display: flex;
+    padding: 4vw;
+    gap: 4vw;
+}
+
+.btn-div button {
+    padding: 2.5vw 6vw;
+    border: none;
+    border-radius: 10px;
+    font-size: 4.8vw;
+    font-weight: 300;
+}
+
+.btn-div button:nth-child(1) {
+    background-color: #1B74E4;
+    color: #fff;
+}
+
+.btn-div a {
+    background-color: #E4E6EB;
+    text-decoration: none;
+    color: #000;
+    padding: 2.5vw 6vw;
+    border: none;
+    border-radius: 10px;
+    font-size: 4.8vw;
+    font-weight: 300;
+}
+
+main .posts{
+    width: 100%;
+    margin-top: 4vw;
+    position: relative;
+}
+
+.post {
+    margin: 2vw 0;
+    width: 100%;
+    min-height: 50vh;
+}
+
+.title {
+    padding: 0 2vw;
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}
+
+.profile{
+    width: 14vw;
+    height: 14vw;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: 2vw;
+}
+
+.profile img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+}
+
+
+
+.post-img{
+    width: 100%;
+    height: 55vh;
+    overflow: hidden;
+    margin-top: 2vw;
+}
+
+.post-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.options h3{
+    margin: 2vw 0;
+    font-size: 2rem;
+}
+
+.title h4{
+    font-size: 4.5vw;
+    }
+
+
+.title h6{
+    font-size: 3vw;
+    display: block;
+}
+
+.post h3{
+    padding: 0 2vw;
+    margin-top: 2vw;
+    font: 300;
+    letter-spacing: 1;
+    line-height: none;
+ }
+
+
+ .options{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+ }

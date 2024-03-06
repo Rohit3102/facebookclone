@@ -1,0 +1,48 @@
+<% - include('header') %>
+    <%- include('nav.ejs') %>
+
+
+        <video  width="320" height="240" controls>
+            <source  src="" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+
+        <% - include('footer') %>
+
+            <!-- <section>
+    <div class="posts">
+        <% posts.reverse().forEach(function(post){%>
+        <div class="post">
+                <div class="title">
+                    <div class="profile">
+                        <img src="/images/uploads/<%= post.user.profileImage %>" alt="">
+                    </div>
+                    <h4><%= post.user.username%></h4>
+                    <h6><%= post.date %></h6>
+                </div>
+                <div class="bio">
+                    <p><%= post.caption %></p>
+                </div>
+                <div class="post-img">
+                 <video src="/images/uploads/<%= post.video %>"></video>
+
+                </div>
+                <hr>
+                <div class="options">
+                    <h3> <i class="ri-thumb-up-line"></i> Like</h3>
+                    <h3> <i class="ri-chat-1-line"></i> Comment</h3>
+                    <h3> <i class="ri-whatsapp-line"></i> Send</h3>
+                    <h3> <i class="ri-share-forward-line"></i> Share</h3>
+
+                </div>
+
+
+            </div>
+            <hr>
+            <% }) %>
+    </div>
+    
+
+
+</section> -->

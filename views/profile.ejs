@@ -1,0 +1,102 @@
+<%- include('header') %>
+    <link rel="stylesheet" href="stylesheets/profile.css">
+
+    <form id="uploadform" hidden action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="profileImage">
+        <button>upload</button>
+    </form>
+
+    <form id="cover" hidden action="/uploadcover" method="post" enctype="multipart/form-data">
+        <input type="file" name="coverImage">
+        <button>upload</button>
+    </form>
+
+    <main>
+        <header>
+            <div class="nav">
+                <div class="back">
+                    <a href="/feed"><i class="ri-arrow-left-line"></i></a>
+                    <h2>
+                        <%= data.username %>
+                    </h2>
+                </div>
+
+                <a href="#">Switch account</a>
+            </div>
+        </header>
+
+        <section class="cover">
+
+            <div class="cover-img">
+                <img src="./images/uploads/<%= data.coverImage%>" alt="">
+                <button id="uploadcover"><i class="ri-camera-fill"></i></button>
+            </div>
+
+
+            <div class="profile-img">
+                <img src="./images/uploads/<%= data.profileImage%>" alt="">
+                <button id="uploadprofile"><i class="ri-camera-line"></i></button>
+            </div>
+
+
+            <div class="info">
+                <h1>
+                    <%= data.username%> ( <%= data.firstname %>)
+                </h1>
+                <h5>4.6k friend</h5>
+                <p>
+                    <%= data.bio%>
+                </p>
+            </div>
+
+            <div class="btn-div">
+                <button><i class="ri-add-fill"></i> Add story</button>
+                <a href="/editprofile/<%= data._id%>"> <i class="ri-pencil-fill"></i> Edit profile</a>
+            </div>
+
+            <div class="posts">
+                <% data.posts.forEach(function(post){ %>
+                    <div class="post">
+                        <div class="title">
+                            <div class="profile">
+                                <img src="/images/uploads/<%= data.profileImage%>"
+                                    alt="">
+                            </div>
+                            <h4> <%= data.username %> </h4>
+                            <h6><%= data.date %></h6>
+                        </div>
+    
+                        <div class="post-img">
+                            <img src="/images/uploads/<%= post.postImage %>"
+                                alt="">
+                        </div>
+                        <div class="options">
+                            <h3> <i class="ri-thumb-up-line"></i> </h3>
+                            <h3> <i class="ri-whatsapp-line"></i> </h3>
+                            <h3> <i class="ri-share-forward-line"></i> </h3>
+                        </div>
+    
+    
+                    </div>
+               <% }) %>
+            </div>
+        </section>
+    </main>
+    <script>
+        document.querySelector("#uploadprofile").addEventListener("click", function () {
+            document.querySelector("#uploadform input").click();
+        });
+
+        document.querySelector("#uploadform input").addEventListener("change", function () {
+            document.querySelector("#uploadform").submit();
+        });
+        
+        document.querySelector("#uploadcover").addEventListener("click", function(){
+            document.querySelector("#cover input").click()
+        });
+        document.querySelector("#cover input").addEventListener("change", function(){
+            document.querySelector("#cover").submit()
+        })
+      
+    </script>
+    <%- include('footer') %>

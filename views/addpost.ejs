@@ -1,0 +1,28 @@
+<%- include('header') %>
+  <link rel="stylesheet" href="stylesheets/addpost.css">
+
+  <div id="sc-edprofile">
+    <h1>Add New Post</h1>
+   <form action="/createpost" method="post" enctype="multipart/form-data">
+    <div class="sc-container">
+      <!--  post Image Input -->
+      <div class="container">
+        <div class="avatar-upload">
+          <div class="avatar-edit">
+            <input type='file' name="postImage" id="imageUpload" />
+            <label for="imageUpload"><i class="ri-image-fill"></i></label>
+          </div>
+          <div class="avatar-preview"> </div>
+        </div>
+        <h5> <label for="imageUpload">Select an Image Photo</label></h5>
+      </div>
+
+      <input type="text" name="caption" placeholder="Add some caption here...." />
+
+      <input type="submit" value="POST" />
+    </div>
+   </form>
+  </div>
+
+
+  <%- include('footer') %>

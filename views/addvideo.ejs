@@ -1,0 +1,28 @@
+<%- include('header') %>
+  <link rel="stylesheet" href="stylesheets/addpost.css">
+
+  <div id="sc-edprofile">
+    <h1>Add New video</h1>
+   <form action="/addvideo" method="post" enctype="multipart/form-data">
+    <div class="sc-container">
+      <!--  post video Input -->
+      <div class="container">
+        <div class="avatar-upload">
+          <div class="avatar-edit">
+            <input type='file' name="video" id="imageUpload" />
+            <label for="imageUpload"><i class="ri-image-fill"></i></label>
+          </div>
+          <div class="avatar-preview"> </div>
+        </div>
+        <h5> <label for="imageUpload">Select an video</label></h5>
+      </div>
+
+      <input type="text" name="caption" placeholder="Add some caption here...." />
+
+      <input type="submit" value="POST" />
+    </div>
+   </form>
+  </div>
+
+
+  <%- include('footer') %>

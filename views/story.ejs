@@ -1,0 +1,26 @@
+<%- include('header') %>
+  <link rel="stylesheet" href="stylesheets/addpost.css">
+
+  <div id="sc-edprofile">
+    <h1>Add New Story</h1>
+   <form action="/uploadstory" method="post" enctype="multipart/form-data">
+    <div class="sc-container">
+      <!--  Story Image Input -->
+      <div class="container">
+        <div class="avatar-upload">
+          <div class="avatar-edit">
+            <input type='file' name="story" id="imageUpload" />
+            <label for="imageUpload"><i class="ri-image-fill"></i></label>
+          </div>
+          <div class="avatar-preview"> </div>
+        </div>
+        <h5> <label for="imageUpload">Select an Image Photo</label></h5>
+      </div>
+
+      <input type="submit" value="POST" />
+    </div>
+   </form>
+  </div>
+
+
+  <%- include('footer') %>
